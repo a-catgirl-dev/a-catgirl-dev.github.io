@@ -94,7 +94,7 @@ a {
 }
 
 .contentbox-container {
-    display: none;
+    z-index: -1;
     opacity: 0;
     position: absolute;
     left: 0px;
@@ -110,9 +110,10 @@ a {
 
 .contentbox-container:target {
     display: block;
-    /* display: none; */
-    opacity: 100; /* FIXME: this shit not working */
+    opacity: 100;
     z-index: 69420;
+
+    transition: opacity 0.2s;
 }
 
 /* never remove, this name is too good. */
