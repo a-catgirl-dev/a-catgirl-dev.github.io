@@ -13,6 +13,7 @@ body {
     font-family: lexend;
 
     animation: fade-in ease 500ms;
+    overflow: hidden;
 }
 
 .center {
@@ -142,7 +143,13 @@ a {
 }
 
 #totally-real-app-mount-react-native-winjs-why-do-people-even-do-this.hidden { opacity: 0 }
-#wait-for-input { opacity: 1 }
+
+#wait-for-input {
+    position: absolute;
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+}
 
 .avatar {
     border-radius: 100%;
@@ -153,4 +160,11 @@ a {
 
 .avatar:hover {
     transform: scale(1.2);
+}
+
+.top {
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
