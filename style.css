@@ -128,3 +128,16 @@ a {
     flex-direction: column;
     gap: 15px;
 }
+
+#visualizer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.on-top {
+    z-index: 9999999;
+}
+
+.hidden { opacity: 0 }
