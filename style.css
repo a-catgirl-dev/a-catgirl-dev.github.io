@@ -73,27 +73,6 @@ a {
     padding: 0px 30%;
 }
 
-@media (max-width: 1000px) {
-    .div {
-        flex-direction: column;
-        gap: 30px;
-        min-width: calc(100vw - 69px);
-        height: calc(85vh);
-        padding: 20px;
-    }
-    #fake-linktree {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    #fake-linktree a {
-        flex-grow: 1;
-        padding: 20px 50px;
-    }
-    .idk {
-        padding: 10px;
-    }
-}
-
 .contentbox-container {
     z-index: -1;
     opacity: 0;
@@ -135,6 +114,9 @@ a {
     bottom: 0px;
     left: 0px;
     width: 100%;
+    opacity: 1;
+
+    transition: opacity 0.5s ease-in-out
 }
 
 .on-top {
@@ -164,4 +146,38 @@ a {
     top: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1000px) {
+    .div {
+        flex-direction: column;
+        gap: 30px;
+        min-width: calc(100vw - 69px);
+        height: calc(85vh);
+        padding: 20px;
+    }
+    #fake-linktree {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #fake-linktree a {
+        flex-grow: 1;
+        padding: 20px 50px;
+    }
+    .idk {
+        padding: 10px;
+    }
+    #visualizer { opacity: 0 }
+}
+
+/* this is the height in which the visualizer is being blocked by .div + ~10 px margin space */
+/* @media (max-height: 865px) { */
+/*
+ * though most of the time, the bars in the middle and right usually never go very high because
+ * of how the height calculations are done, so allow potental blocking.
+ * even if blocked, usually only for a short time (one time burst above) that the user
+ * wont notice
+ */
+@media (max-height: 720px) {
+    #visualizer { opacity: 0 }
 }
