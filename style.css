@@ -140,4 +140,5 @@ a {
     z-index: 9999999;
 }
 
-.hidden { opacity: 0 }
+#totally-real-app-mount-react-native-winjs-why-do-people-even-do-this.hidden { opacity: 0 }
+#wait-for-input { opacity: 1 }
