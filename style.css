@@ -61,6 +61,7 @@ body {
 #fake-linktree {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -142,3 +143,14 @@ a {
 
 #totally-real-app-mount-react-native-winjs-why-do-people-even-do-this.hidden { opacity: 0 }
 #wait-for-input { opacity: 1 }
+
+.avatar {
+    border-radius: 100%;
+    width: 150px;
+
+    transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.avatar:hover {
+    transform: scale(1.2);
+}
