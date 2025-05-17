@@ -143,7 +143,10 @@ a {
 
 #totally-real-app-mount-react-native-winjs-why-do-people-even-do-this.hidden { opacity: 0 }
 
-#wait-for-input { opacity: 1 }
+#wait-for-input {
+    position: fixed; /* WTF is position: static? it breaks the .on-top style */
+    opacity: 1
+}
 
 .avatar {
     border-radius: 100%;
