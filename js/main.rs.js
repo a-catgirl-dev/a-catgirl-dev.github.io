@@ -43,9 +43,21 @@ function startAudio() {
         const visualizer = new Visualizer(audio);
         visualizer.resize();
         visualizer.redraw();
+        provideAttribution();
     }).catch(error => {
         console.log("gg.", error);
     });
+}
+
+function provideAttribution() {
+    const element = document.createElement("a");
+    const target = document.getElementById("links")
+
+    // TODO: read the <source> tag and get name there
+    element.textContent = "🎵: venvn - float play";
+    element.href = "https://www.youtube.com/watch?v=GrreLo9qchQ"
+    element.target = "_blank"
+    target.appendChild(element);
 }
 
 function isMobile() {
