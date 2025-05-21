@@ -31,6 +31,8 @@ body {
     min-height: 69px;
     overflow-y: scroll;
 
+    border-radius: 2ex;
+
     padding: 69px;
 
     transition: all 0.1s cubic-bezier(1, 0, 0, 1);
