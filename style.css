@@ -148,7 +148,30 @@ a {
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
+    .div {
+        min-width: 700px;
+        /* gap: 30px; */
+        padding: 50px;
+    }
+}
+
+@media (max-width: 870px) {
+    .div {
+        min-width: calc(100vw - 200px);
+    }
+}
+
+@media (max-width: 1100px)
+/* this is the height in which the visualizer is being blocked by .div + ~10 px margin space */
+/* or (max-height: 865px) { */
+/*
+ * though most of the time, the bars in the middle and right usually never go very high because
+ * of how the height calculations are done, so allow potental blocking.
+ * even if blocked, usually only for a short time (one time burst above) that the user
+ * wont notice
+ */
+or (max-height: 650px) {
     .div {
         flex-direction: column;
         gap: 30px;
@@ -167,17 +190,5 @@ a {
     .idk {
         padding: 10px;
     }
-    #visualizer { opacity: 0 }
-}
-
-/* this is the height in which the visualizer is being blocked by .div + ~10 px margin space */
-/* @media (max-height: 865px) { */
-/*
- * though most of the time, the bars in the middle and right usually never go very high because
- * of how the height calculations are done, so allow potental blocking.
- * even if blocked, usually only for a short time (one time burst above) that the user
- * wont notice
- */
-@media (max-height: 720px) {
     #visualizer { opacity: 0 }
 }
