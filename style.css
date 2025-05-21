@@ -127,7 +127,10 @@ a {
 
 #wait-for-input {
     position: fixed; /* WTF is position: static? it breaks the .on-top style */
-    opacity: 1
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .avatar {
