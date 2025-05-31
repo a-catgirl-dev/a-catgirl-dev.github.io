@@ -153,6 +153,8 @@ a {
     transform: translate(-50%, -50%);
 }
 
+/* weird mobile hacks. allows site to fit better on different screen sizes. ykwim */
+
 @media (max-width: 1500px) {
     .div {
         min-width: 700px;
@@ -167,21 +169,12 @@ a {
     }
 }
 
-@media (max-width: 1100px)
-/* this is the height in which the visualizer is being blocked by .div + ~10 px margin space */
-/* or (max-height: 865px) { */
-/*
- * though most of the time, the bars in the middle and right usually never go very high because
- * of how the height calculations are done, so allow potental blocking.
- * even if blocked, usually only for a short time (one time burst above) that the user
- * wont notice
- */
-or (max-height: 650px) {
+@media (max-width: 1100px) {
     .div {
         flex-direction: column;
         gap: 30px;
         min-width: calc(100vw - 69px);
-        height: calc(85vh);
+        /* height: calc(85vh); */
         padding: 20px;
     }
     #fake-linktree {
@@ -195,5 +188,8 @@ or (max-height: 650px) {
     .idk {
         padding: 10px;
     }
+}
+
+@media (max-height: 860px) or (max-width: 438px) {
     #visualizer { opacity: 0 }
 }
