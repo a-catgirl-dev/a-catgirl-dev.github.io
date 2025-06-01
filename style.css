@@ -174,7 +174,6 @@ a {
         flex-direction: column;
         gap: 30px;
         min-width: calc(100vw - 69px);
-        /* height: calc(85vh); */
         padding: 20px;
     }
     #fake-linktree {
@@ -192,4 +191,8 @@ a {
 
 @media (max-height: 860px) or (max-width: 438px) {
     #visualizer { opacity: 0 }
+}
+
+@media (max-height: 582px) or (max-width: 438px) {
+    .div { height: calc(85vh) }
 }
