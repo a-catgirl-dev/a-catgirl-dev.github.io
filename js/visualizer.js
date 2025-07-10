@@ -1,5 +1,6 @@
-const visualizerBackground = "rgba(30, 30, 46, 1)";
-const visualizerColor = "rgba(205, 214, 244, 0.5)";
+const visualizerBackground = "rgb(24, 24, 37)";
+const visualizerBottomColor = "rgba(205, 214, 244, 0.5)";
+const visualizerTopColor = "rgba(205, 214, 244, 0.2";
 
 const numberOfBars = 128;
 const sampleSize = numberOfBars * 4;
@@ -45,7 +46,11 @@ export class Visualizer {
             let tmpHeight = this.data[Math.floor((i * 0.5) * (this.bufferLength / numberOfBars))];
             let barHeight = (tmpHeight / 255) * this.canvas.height;
 
-            this.ctx.fillStyle = visualizerColor;
+            const gradient = this.ctx.createLinearGradient(0, this.canvas.height, 0, 0);
+            gradient.addColorStop(1, visualizerTopColor);
+            gradient.addColorStop(0, visualizerBottomColor);
+            this.ctx.fillStyle = gradient;
+
             this.ctx.fillRect(
                 i * (barWidth + gap),
                 this.canvas.height - barHeight,
