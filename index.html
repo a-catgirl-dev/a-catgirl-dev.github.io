@@ -14,23 +14,10 @@
         <title>a catgirl dev</title>
 
         <link rel="stylesheet" href="style.css">
-
-        <noscript>
-            <style>
-                #totally-real-app-mount-react-native-winjs-why-do-people-even-do-this.hidden { opacity: 1 }
-                #wait-for-input { display: none }
-            </style>
-        </noscript>
     </head>
     <body>
-        <div id="wait-for-input" class="on-top">
-            <h1 class="center">click here.</h1>
-            <p class="top">this site will begin playing audio.
-                <a onclick="disableAudio()" href="#">opt out</a>
-            </p>
-        </div>
         <canvas id="visualizer"></canvas>
-        <div id="totally-real-app-mount-react-native-winjs-why-do-people-even-do-this" class="center hidden">
+        <div id="totally-real-app-mount-react-native-winjs-why-do-people-even-do-this" class="center">
             <div class="div">
                 <div>
                     <img class="avatar" src="https://avatars.githubusercontent.com/u/75321465?v=4" alt="catgirl">
@@ -42,6 +29,7 @@
                         <a href="#projects">projects</a>
                         <a href="#techstack">techstack</a>
                         <a href="./pgp.asc">PGP</a>
+                        <a href="https://www.youtube.com/watch?v=GrreLo9qchQ" target="_blank">🎵: venvn - float play</a>
                     </div>
                 </div>
                 <div id="fake-linktree">
@@ -130,7 +118,7 @@
                 </ul>
             </div>
         </div>
-        <audio id="audio" loop>
+        <audio id="audio" loop autoplay="">
             <source src="./assets/venvn - float play.mp3" type="audio/mpeg">
         </audio>
 
