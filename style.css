@@ -124,6 +124,20 @@ a {
     z-index: 9999999;
 }
 
+/* trans rights! */
+#totally-real-app-mount-react-native-winjs-why-do-people-even-do-this::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    /*height: .25em;*/
+    height: 0.8em;
+    background: linear-gradient(90deg, #78d8ef 20%, #ffb2ca 20%, #ffb2ca 40%, #fff 40%, #fff 60%, #ffb2ca 60%, #ffb2ca 80%, #78d8ef 0) fixed;
+    width: 100%;
+    z-index: 100;
+    border-bottom-left-radius: 2ex;
+    border-bottom-right-radius: 2ex;
+}
+
 #totally-real-app-mount-react-native-winjs-why-do-people-even-do-this.hidden { opacity: 0 }
 
 #wait-for-input {
