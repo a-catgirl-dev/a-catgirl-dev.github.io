@@ -82,14 +82,16 @@ function startAudio() {
 }
 
 function provideAttribution() {
+    const container = document.createElement("p");
     const element = document.createElement("a");
-    const target = document.getElementById("links")
 
     // TODO: read the <source> tag and get name there
-    element.textContent = "🎵: venvn - float play";
-    element.href = "https://www.youtube.com/watch?v=GrreLo9qchQ"
+    container.classList.add("top");
+    element.textContent = "🎵: WYS - Take Me Back";
+    element.href = "https://www.youtube.com/watch?v=8uOUPEHsyN8"
     element.target = "_blank"
-    target.appendChild(element);
+    container.appendChild(element);
+    document.body.appendChild(container);
 }
 
 function isMobile() {
