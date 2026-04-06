@@ -22,12 +22,9 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.main-content {
+.div {
     display: flex;
     gap: 100px;
-}
-
-.div {
     position: relative;
     background-color: #1e1e2e;
     min-width: 420px;
@@ -73,25 +70,8 @@ a {
     color: #f5c2e7;
 }
 
-.alt {
-    /*
-     * KLUDGE: this is 100vh instead of 100%. 100% is just flat out wrong
-     * when scrolled but 100vh is too long. how does one even fix htis shit
-     *
-     * so the actual kludge is to just subtract 100vh with 100% (lmao) and then
-     * add the size of padding * 2 (where padding is 69px)
-     *
-     * it "works" for suffiently long enough sections, but for very short ones
-     * (no scrolling) it will have a scroll all of a sudden.
-     *
-     * hence why this is marked as a `KLUDGE` instead of a `HACK`. it is written
-     * specifically for the current contents on this site. once it is extended
-     * or shortened it will literally stop working
-     *
-     * why is css so hard?
-     */
-    height: calc((100vh - 100%) + 138px);
-    /* height: 100vh; */
+.idk {
+    padding: 0px 30%;
 }
 
 .contentbox-container {
@@ -100,8 +80,9 @@ a {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e1e2e;
 
     overflow-y: scroll;
 
@@ -202,7 +183,7 @@ a {
 }
 
 @media (max-width: 1100px) {
-    .main-content {
+    .div {
         flex-direction: column;
         gap: 30px;
         min-width: calc(100vw - 69px);
