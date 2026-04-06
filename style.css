@@ -111,7 +111,7 @@ a {
 .contentbox-container:target {
     display: block;
     opacity: 100;
-    z-index: 69420;
+    z-index: 10;
 
     transition: opacity 0.2s;
 }
