@@ -41,7 +41,6 @@ const mainContent = document.getElementById("totally-real-app-mount-react-native
 const audio = document.getElementById("audio");
 
 function disableAudio() {
-    console.log("meow");
     showMainSite();
 }
 // i hate jhavascript so much
@@ -102,7 +101,6 @@ function go() {
 }
 
 if (isMobile()) {
-    console.log("p");
     // poorly named function, but skips the whole click here thing and doens't do audio.
     disableAudio();
 }
