@@ -47,6 +47,7 @@ if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 }
 
 function showMainSite() {
+    document.body.removeEventListener("click", go)
     mainContent.classList.remove("hidden");
     mainContent.classList.add("visible");
 
