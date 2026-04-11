@@ -88,6 +88,7 @@ function go() {
 
 if (isMobile()) {
     // poorly named function, but skips the whole click here thing and doens't do audio.
+    document.body.removeEventListener("click", go)
     showMainSite();
 }
 
