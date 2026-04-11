@@ -40,12 +40,6 @@ const overlay = document.getElementById("wait-for-input");
 const mainContent = document.getElementById("totally-real-app-mount-react-native-winjs-why-do-people-even-do-this");
 const audio = document.getElementById("audio");
 
-function disableAudio() {
-    showMainSite();
-}
-// i hate jhavascript so much
-window.disableAudio = disableAudio;
-
 function showMainSite() {
     var o = 0;
     var timer = setInterval(function() {
@@ -64,6 +58,7 @@ function showMainSite() {
 
     overlay.style.display = "none";
 }
+window.showSite = showMainSite;
 
 function startAudio() {
     audio.volume = 0.5;
@@ -102,7 +97,7 @@ function go() {
 
 if (isMobile()) {
     // poorly named function, but skips the whole click here thing and doens't do audio.
-    disableAudio();
+    showMainSite();
 }
 
 document.body.addEventListener("click", go);
