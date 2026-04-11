@@ -48,13 +48,9 @@ if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
 
 function showMainSite() {
     document.body.removeEventListener("click", go)
+    overlay.remove();
     mainContent.classList.remove("hidden");
     mainContent.classList.add("visible");
-
-    overlay.style.opacity = "0";
-    overlay.style.pointerEvents = "none";
-
-    overlay.style.display = "none";
 }
 window.showMainSite = showMainSite;
 
