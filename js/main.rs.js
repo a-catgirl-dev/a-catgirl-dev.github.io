@@ -67,16 +67,14 @@ function startAudio() {
 }
 
 function provideAttribution() {
-    const container = document.createElement("p");
+    const target = document.getElementById("links");
     const element = document.createElement("a");
 
     // TODO: read the <source> tag and get name there
-    container.classList.add("top");
     element.textContent = "🎵: WYS - Take Me Back";
     element.href = "https://www.youtube.com/watch?v=8uOUPEHsyN8"
     element.target = "_blank"
-    container.appendChild(element);
-    document.body.appendChild(container);
+    target.appendChild(element);
 }
 
 function go() {
