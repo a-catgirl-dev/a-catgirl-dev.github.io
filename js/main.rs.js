@@ -55,7 +55,7 @@ function showMainSite() {
 
     overlay.style.display = "none";
 }
-window.showSite = showMainSite;
+window.showMainSite = showMainSite;
 
 function startAudio() {
     audio.volume = 0.5;
