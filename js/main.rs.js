@@ -40,6 +40,12 @@ const overlay = document.getElementById("wait-for-input");
 const mainContent = document.getElementById("totally-real-app-mount-react-native-winjs-why-do-people-even-do-this");
 const audio = document.getElementById("audio");
 
+if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    // poorly named function, but skips the whole click here thing and doens't do audio.
+    document.body.removeEventListener("click", go)
+    showMainSite();
+}
+
 function showMainSite() {
     mainContent.classList.remove("hidden");
     mainContent.classList.add("visible");
@@ -76,20 +82,10 @@ function provideAttribution() {
     document.body.appendChild(container);
 }
 
-function isMobile() {
-    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
-
 function go() {
     document.body.removeEventListener("click", go);
     showMainSite();
     startAudio();
-}
-
-if (isMobile()) {
-    // poorly named function, but skips the whole click here thing and doens't do audio.
-    document.body.removeEventListener("click", go)
-    showMainSite();
 }
 
 document.body.addEventListener("click", go);
