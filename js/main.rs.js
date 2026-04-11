@@ -40,10 +40,7 @@ const overlay = document.getElementById("wait-for-input");
 const mainContent = document.getElementById("totally-real-app-mount-react-native-winjs-why-do-people-even-do-this");
 const audio = document.getElementById("audio");
 
-let done = false;
-
 function disableAudio() {
-    done = true;
     console.log("meow");
     showMainSite();
 }
@@ -98,19 +95,16 @@ function isMobile() {
     return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
+function go() {
+    document.body.removeEventListener("click", go);
+    showMainSite();
+    startAudio();
+}
+
 if (isMobile()) {
     console.log("p");
     // poorly named function, but skips the whole click here thing and doens't do audio.
     disableAudio();
 }
 
-document.body.addEventListener("click", () => {
-    if (done) {
-        // TODO: how do i destroy an eventListener?
-        return;
-    }
-    done = true;
-
-    showMainSite();
-    startAudio();
-});
+document.body.addEventListener("click", go);
