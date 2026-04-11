@@ -41,17 +41,8 @@ const mainContent = document.getElementById("totally-real-app-mount-react-native
 const audio = document.getElementById("audio");
 
 function showMainSite() {
-    var o = 0;
-    var timer = setInterval(function() {
-        if (o >= 1.5) {
-            clearInterval(timer);
-        }
-        mainContent.style.opacity = o;
-        o += 0.01;
-
-        // bad and stupid but im too lazy to figure out how to wait until the timer is over
-        mainContent.classList.remove("hidden");
-    }, 5);
+    mainContent.classList.remove("hidden");
+    mainContent.classList.add("visible");
 
     overlay.style.opacity = "0";
     overlay.style.pointerEvents = "none";

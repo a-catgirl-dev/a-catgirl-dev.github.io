@@ -140,6 +140,16 @@ a {
 
 #totally-real-app-mount-react-native-winjs-why-do-people-even-do-this.hidden { opacity: 0 }
 
+#totally-real-app-mount-react-native-winjs-why-do-people-even-do-this.visible {
+    transition: opacity 1s, translate 1s;
+    opacity: 1;
+    translate: 0 0;
+    @starting-style {
+        opacity: 0;
+        translate: 0 10px;
+    }
+}
+
 #wait-for-input {
     position: fixed; /* WTF is position: static? it breaks the .on-top style */
     opacity: 1;
