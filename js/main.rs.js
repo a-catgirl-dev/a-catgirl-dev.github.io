@@ -36,7 +36,8 @@
 
 import { Visualizer } from "./visualizer.js";
 
-if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+if ((/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ||
+        window.location.hash.length != 0)
     showMainSite();
 else
     document.body.addEventListener("click", go);
