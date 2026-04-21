@@ -36,16 +36,15 @@
 
 import { Visualizer } from "./visualizer.js";
 
-const overlay = document.getElementById("wait-for-input");
-const mainContent = document.getElementById("totally-real-app-mount-react-native-winjs-why-do-people-even-do-this");
-const audio = document.getElementById("audio");
-
 if (/Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
     showMainSite();
 else
     document.body.addEventListener("click", go);
 
 function showMainSite() {
+    const mainContent = document.getElementById("totally-real-app-mount-react-native-winjs-why-do-people-even-do-this");
+    const overlay = document.getElementById("wait-for-input");
+
     document.body.removeEventListener("click", go)
     overlay.remove();
     mainContent.classList.remove("hidden");
@@ -54,6 +53,8 @@ function showMainSite() {
 window.showMainSite = showMainSite;
 
 function startAudio() {
+    const audio = document.getElementById("audio");
+
     audio.volume = 0.5;
     audio.play().then(() => {
         const visualizer = new Visualizer(audio);
