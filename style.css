@@ -59,6 +59,36 @@ body {
     gap: 15px;
 }
 
+/* TODO: align center */
+#eightyeightxthirtyone {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 88px);
+    /* fine to use pixels here, since the grid is dynamic anyways */
+    gap: 2px;
+
+    /* XXX: come on... delete these styles but still retain it
+     * on desktop */
+    margin-top: 15px;
+    /* TODO: apply these styles in mobile mode, but only when
+     * somehow it is under the linktree in mobile.
+     */
+    /* align-items: center; */
+    /* justify-content: center; */
+
+    & a {
+        border: none;
+        line-height: 0;
+    }
+
+    & img {
+        image-rendering: pixelated;
+    }
+
+    & a:hover img {
+        filter: brightness(1.2);
+    }
+}
+
 #fake-linktree {
     display: flex;
     flex-direction: column;
